@@ -1,5 +1,6 @@
 
 import './App.css'
+import Home from './pages/Home/Home'
 
 function App() {
 
@@ -7,7 +8,7 @@ function App() {
   return (
     <div className="App">
       
-      <h1>Início do projeto</h1>
+      <Home />
       
     </div>
   )
