@@ -3,7 +3,7 @@ function Header() {
     return (
       <header className="navbar">
         <div className="logo">
-            <img src="../public/logo765x625.png"></img>
+            <img src="../logo765x625.png"></img>
         </div>
       </header>
     )
