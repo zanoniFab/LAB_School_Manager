@@ -79,13 +79,3 @@ function FormHook () {
 }
 
 export default FormHook;
-// -nome
-// -telefone
-// -data de nascimento
-// -cpf
-// -email
-// -senha
-// -confirmação de senha
-// validação com yup
-// salvar no json server
-// ir para /login
