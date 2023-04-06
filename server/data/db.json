@@ -1,22 +1,13 @@
 {
   "users": [
     {
-      "email": "usuario@teste.com.br",
-      "password": "$2a$10$BmakfCEiDXPHjpAY.oriKOnm0.qmRYYW3Ny1a4FqdvLfzvk4Vj0qm",
-      "name": "Pedagoga teste",
-      "phone": "(99) 99999-9999",
-      "birthdate": "01/01/1990",
-      "cpf": "999.999.999-99",
-      "id": 2
-    },
-    {
       "email": "zanonao@gmail.com",
-      "password": "$2a$10$.ldKJlS/itvsuRg0sd5fqORb8y7en8ueFLLm1oCyQUdTyt8IcvNku",
+      "password": "$2a$10$Fd5fylr0jCWu4rk//xu.Zupj.KjbmZulVpMVgRr0VKS/ncOCWgGyO",
       "nome": "zanonao",
       "telefone": "",
       "dataNascimento": "",
       "cpf": "",
-      "id": 3
+      "id": 1
     }
   ],
   "students": [

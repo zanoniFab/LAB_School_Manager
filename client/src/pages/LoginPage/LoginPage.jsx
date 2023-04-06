@@ -5,85 +5,56 @@ import Button from '../../components/Button'
 import { useSetUserInfo } from '../../hooks/useUserInfo'
 import { apiService } from '../../service/api'
 import './LoginPage.css'
+import {yupResolver} from '@hookform/resolvers/yup';
+import {validationSchema, defaultValues} from './LoginSchema';
+import {useForm} from 'react-hook-form';
 
 function LoginPage () {
   const navigate = useNavigate()
   const setUserInfo = useSetUserInfo()
+  const [isSubmitting, setSubmitting] = useState(false);
 
-  const [email, setEmail] = useState('')
-  const [showEmailHelper, setShowEmailHelper] = useState(false)
+  const {register,
+          handleSubmit,
+          formState:{errors},
+          reset} = useForm({resolver: yupResolver(validationSchema),defaultValues});
 
-  const [password, setPassword] = useState('')
-  const [showPasswordHelper, setShowPasswordHelper] = useState(false)
-
-  const [loading, setLoading] = useState(false)
-  const [error, setError] = useState(null)
-
-  const handleChangeEmail = (event) => {
-    const newEmail = event.target.value
-    setEmail(newEmail)
-  }
-
-  const handleChangePassword = (event) => {
-    const newPassword = event.target.value
-    setPassword(newPassword)
-  }
-
-  const handleLoginAction = async () => {
-    setError(null)
-    setShowEmailHelper(!email)
-    setShowPasswordHelper(!password)
-    if (!email || !password) {
-      return
-    }
-    setLoading(true)
-    const response = await apiService.get(
-      `/users?email=${email}&password=${password}`
+  const onSubmit = async (data) => {
+    setSubmitting(true);
+    const response = await apiService.post(
+      `/users?email=${email.value}&password=${password.value}`
     )
-    if (response?.data?.length) {
-      const { name, isAdmin } = response.data[0]
-      setUserInfo({
-        name,
-        isAdmin
-      })
+    if (response.data) {
       navigate('/')
-    } else {
-      setUserInfo()
-      setError('Credenciais inválidas!')
+      return;
     }
-    setLoading(false)
+    setSubmitting(false);
+    alert(response.error);
   }
 
   return (
     <div className='login-container'>
       <div className='box-login'>
         <h2 className='title'>Bem-vindo ao LAB School Manager!</h2>
-
-        <div className='box-login-form'>
+        <form className='box-login-form' onSubmit={handleSubmit(onSubmit)}>
           <InputGroup
+            id='email'
             type="text"
-            placeholder="Seu e-mail"
             labelText="E-mail"
-            value={email}
-            onChange={handleChangeEmail}
-            helperText={showEmailHelper ? 'Campo obrigatório' : ''}
+            placeholder="Seu e-mail"
+            {...register('email')}
+            helperText = {errors?.email?.message}
             />
           <InputGroup
+            id='password'
             type="password"
             placeholder="Senha"
             labelText="Senha"
-            value={password}
-            onChange={handleChangePassword}
-            helperText={showPasswordHelper ? 'Campo obrigatório' : ''}
-            />
-        </div>
-
-        {error && <p className="errorMessage">{error}</p>}
-
-        <Button onClick={handleLoginAction} disabled={loading}>
-          {loading ? 'Carregando...' : 'Entrar'}
-        </Button>
-
+            {...register('password')}
+            helperText={errors?.password?.message}
+          />
+          <Button type='submit' disabled={isSubmitting}>Entrar</Button>
+        </form>
         <Link to="/registerPage" className="signinButton">
           Cadastrar
         </Link>
