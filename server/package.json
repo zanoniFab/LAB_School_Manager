@@ -1,20 +1,28 @@
 {
-  "name": "LAB_School_Manager",
+  "name": "lab-school-server",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Servidor de testes do projeto LAB School",
+  "main": "server.js",
   "scripts": {
-    "start": "json-server --watch data/db.json --port=8081"
+    "dev": "json-server-auth data/db.json -r routes.json --port 8081"
   },
-  "dependencies": {
-    "prop-types": "^15.8.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:Devin-ilog/m02-p02-server.git"
   },
+  "keywords": [
+    "lab-school",
+    "json-server"
+  ],
+  "author": "DevInHouse",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Devin-ilog/m02-p02-server/issues"
+  },
+  "homepage": "https://github.com/Devin-ilog/m02-p02-server#readme",
+  "dependencies": {},
   "devDependencies": {
-    "@types/react": "^18.0.28",
-    "@types/react-dom": "^18.0.11",
-    "@vitejs/plugin-react": "^3.1.0",
-    "vite": "^4.2.0"
+    "json-server": "^0.17.3",
+    "json-server-auth": "^2.1.0"
   }
 }
