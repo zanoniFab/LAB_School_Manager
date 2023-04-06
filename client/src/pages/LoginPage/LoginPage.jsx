@@ -2,7 +2,6 @@ import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import InputGroup from '../../components/InputGroup'
 import Button from '../../components/Button'
-import { useSetUserInfo } from '../../hooks/useUserInfo'
 import { apiService } from '../../service/api'
 import './LoginPage.css'
 import {yupResolver} from '@hookform/resolvers/yup';
@@ -11,7 +10,6 @@ import {useForm} from 'react-hook-form';
 
 function LoginPage () {
   const navigate = useNavigate()
-  const setUserInfo = useSetUserInfo()
   const [isSubmitting, setSubmitting] = useState(false);
 
   const {register,
@@ -21,9 +19,7 @@ function LoginPage () {
 
   const onSubmit = async (data) => {
     setSubmitting(true);
-    const response = await apiService.post(
-      `/users?email=${email.value}&password=${password.value}`
-    )
+    const response = await apiService.post('/login',data)
     if (response.data) {
       navigate('/')
       return;
@@ -54,6 +50,7 @@ function LoginPage () {
             helperText={errors?.password?.message}
           />
           <Button type='submit' disabled={isSubmitting}>Entrar</Button>
+          <Button type='button' onClick={()=>navigate("/")}>Voltar</Button>
         </form>
         <Link to="/registerPage" className="signinButton">
           Cadastrar
@@ -63,4 +60,4 @@ function LoginPage () {
   )
 }
 
-export default LoginPage
+export default LoginPage;
