@@ -2,29 +2,16 @@ import {useForm} from 'react-hook-form';
 import InputGroup from '../InputGroup';
 import {yupResolver} from '@hookform/resolvers/yup';
 import {validationSchema, defaultValues} from './FormSchema';
-import { useState } from 'react';
-import { apiService } from '../../service/api';
+import Button from '../Button';
 import { useNavigate } from 'react-router-dom';
-function FormHook () {
-    const [isSubmitting, setSubmitting] = useState(false);
+
+function FormRegister ({onSubmit,isSubmitting,initialValues=defaultValues}) {
     const navigate = useNavigate();
     const {register,
             handleSubmit,
             formState:{errors},
-            reset} = useForm({resolver: yupResolver(validationSchema),defaultValues});
+            reset} = useForm({resolver: yupResolver(validationSchema),defaultValues:initialValues});
 
-    const onSubmit = async (data)=> {
-        setSubmitting(true);
-        const payload = {...data};
-        delete payload.passwordConfirm;
-        const response = await apiService.post("/register",payload);
-        if (response.data) {
-            navigate("/login");
-            return;
-        }
-        setSubmitting(false);
-        alert(response.error);
-    }
 
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
@@ -44,13 +31,14 @@ function FormHook () {
             <InputGroup 
                 id='dataNascimento'
                 type='date'
-                labelText='dataNascimento'
+                labelText='Data de Nascimento'
                 {...register('dataNascimento')}
                 helperText = {errors?.dataNascimento?.message}
             />
             <InputGroup 
                 id='cpf' 
                 type='number'
+                labelText='CPF'
                 {...register('cpf')}
                 helperText = {errors?.cpf?.message}
             />
@@ -72,10 +60,11 @@ function FormHook () {
                 {...register('passwordConfirm')}
                 helperText={errors?.passwordConfirm?.message}
             />
-            <button type='button' onClick={()=>reset()}>Limpar</button>
-            <button type='submit'disabled={isSubmitting}>Enviar</button>
+            <Button type='button' onClick={()=>reset()}>Limpar</Button>
+            <Button type='submit'disabled={isSubmitting}>Enviar</Button>
+            <Button type='button' onClick={()=>navigate("/")}>Voltar</Button>
         </form>
     )
 }
 
-export default FormHook;
+export default FormRegister;
