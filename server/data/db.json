@@ -8,6 +8,15 @@
       "dataNascimento": "",
       "cpf": "",
       "id": 1
+    },
+    {
+      "email": "girafa@gmail.com",
+      "password": "$2a$10$.1bVrMqktnw6J8a5sviG0.OE6iftiEGDYif6NoiYNqyw7aPd/7PDy",
+      "nome": "girafa",
+      "telefone": "",
+      "dataNascimento": "",
+      "cpf": "84706066034",
+      "id": 2
     }
   ],
   "students": [

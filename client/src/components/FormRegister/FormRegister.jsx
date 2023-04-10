@@ -31,13 +31,14 @@ function FormRegister ({onSubmit,isSubmitting,initialValues=defaultValues}) {
             <InputGroup 
                 id='dataNascimento'
                 type='date'
-                labelText='dataNascimento'
+                labelText='Data de Nascimento'
                 {...register('dataNascimento')}
                 helperText = {errors?.dataNascimento?.message}
             />
             <InputGroup 
                 id='cpf' 
                 type='number'
+                labelText='CPF'
                 {...register('cpf')}
                 helperText = {errors?.cpf?.message}
             />
