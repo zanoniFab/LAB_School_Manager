@@ -5,8 +5,10 @@ import './LoginPage.css'
 import {yupResolver} from '@hookform/resolvers/yup';
 import {validationSchema, defaultValues} from './LoginSchema';
 import {useForm} from 'react-hook-form';
+import { useUserInfo } from '../../hooks/useUserInfo/useUserInfo';
 
-function LoginPage ({onSubmit,isSubmitting,initialValues=defaultValues}) {
+function LoginPage () {
+  const {isSubmitting,onSubmit} = useUserInfo();
   const navigate = useNavigate()
 
   const {register,
