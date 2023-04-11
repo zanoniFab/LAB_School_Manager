@@ -5,7 +5,7 @@ export const useUserInfo = () => {
 
     const onSubmit = async (data) => {
         setSubmitting(true);
-        const response = await apiService.post('/login',data)
+        const response = await apiService.post('/register',data)
         if (response.data) {
         navigate('/')
         return;

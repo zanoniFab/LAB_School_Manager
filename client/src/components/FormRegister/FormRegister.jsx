@@ -62,7 +62,7 @@ function FormRegister ({onSubmit,isSubmitting,initialValues=defaultValues}) {
             />
             <Button type='button' onClick={()=>reset()}>Limpar</Button>
             <Button type='submit'disabled={isSubmitting}>Enviar</Button>
-            <Button type='button' onClick={()=>navigate("/")}>Voltar</Button>
+            <Button type='button' onClick={()=>navigate("/login")}>Voltar</Button>
         </form>
     )
 }
