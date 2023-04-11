@@ -8,25 +8,13 @@ import {yupResolver} from '@hookform/resolvers/yup';
 import {validationSchema, defaultValues} from './LoginSchema';
 import {useForm} from 'react-hook-form';
 
-function LoginPage () {
+function LoginPage ({onSubmit,isSubmitting,initialValues=defaultValues}) {
   const navigate = useNavigate()
-  const [isSubmitting, setSubmitting] = useState(false);
 
   const {register,
           handleSubmit,
           formState:{errors},
           reset} = useForm({resolver: yupResolver(validationSchema),defaultValues});
-
-  const onSubmit = async (data) => {
-    setSubmitting(true);
-    const response = await apiService.post('/login',data)
-    if (response.data) {
-      navigate('/')
-      return;
-    }
-    setSubmitting(false);
-    alert(response.error);
-  }
 
   return (
     <div className='login-container'>
@@ -53,7 +41,7 @@ function LoginPage () {
           <Button type='button' onClick={()=>navigate("/")}>Voltar</Button>
         </form>
         <Link to="/registerPage" className="signinButton">
-          Cadastrar
+          Criar conta
         </Link>
       </div>
     </div>
