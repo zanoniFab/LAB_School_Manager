@@ -1,5 +1,6 @@
 import {useUserRegister } from '../../hooks/useUserRegister';
 import FormRegister from '../../components/FormRegister';
+
 function RegisterPage () {
     const {isSubmitting,registerUser} = useUserRegister();
 
