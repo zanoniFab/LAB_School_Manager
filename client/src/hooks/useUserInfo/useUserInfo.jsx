@@ -1,24 +1,31 @@
 import { useState } from 'react';
 import { apiService } from '../../service/api';
-import { useNavigate } from 'react-router-dom';
-export const useUserInfo = () => {
 
+export const useUserInfo = () => {
     const [isSubmitting, setSubmitting] = useState(false);
-    const navigate = useNavigate();
+    const [data,setData] = useState();
+    const [error,setError] = useState(null);
     
-    const onSubmit = async (data) => {
+    const loginRequest = async (path, loginData) => {
         setSubmitting(true);
-        const response = await apiService.post('/login',data)
-        if (response.data) {
-        navigate('/')
-        return;
-        }
+        
+        const response = await apiService.post(path, loginData)
+        console.log(response)
+        setError(response.error);
+        setData(response.data);
         setSubmitting(false);
-        alert("Login ou senha inválidos");
+
+        if(response.error) {
+            alert(response.error);
+        }
+        return response.data;
+        
     }
 
     return {
+        user: data,
+        error,
         isSubmitting,
-        onSubmit
+        loginRequest
     }
 }

@@ -23,7 +23,7 @@ export const useUserRegister = () => {
         setSubmitting(true);
         const response = await apiService.post("/register",data);
         if (response.data) {
-            // navigate("/login");
+            alert("Registrou");
             return;
         }
         setSubmitting(false);

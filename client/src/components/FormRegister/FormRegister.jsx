@@ -12,7 +12,6 @@ function FormRegister ({onSubmit,isSubmitting,initialValues=defaultValues}) {
             formState:{errors},
             reset} = useForm({resolver: yupResolver(validationSchema),defaultValues:initialValues});
 
-
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
             <InputGroup 

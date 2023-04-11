@@ -17,6 +17,7 @@ const handleGet = async (endpoint) => {
 
 const handlePost = async (endpoint, data) => {
   try {
+    console.log(data)
     const response = await api.post(endpoint, data);
 
     return { data: response.data, error: null };

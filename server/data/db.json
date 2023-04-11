@@ -8,6 +8,15 @@
       "dataNascimento": "",
       "cpf": "",
       "id": 1
+    },
+    {
+      "email": "teste@gmail.com",
+      "password": "$2a$10$bBQQsrPjpHZGoZNVKWe5fOOhx1HhucId9PuB309fB3k2RGEbD52nq",
+      "nome": "alalala",
+      "telefone": "",
+      "dataNascimento": "",
+      "cpf": "",
+      "id": 2
     }
   ],
   "students": [
