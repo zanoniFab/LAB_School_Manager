@@ -19,8 +19,21 @@ export const useUserRegister = () => {
         alert(response.error);
     }
 
+    const registerAluno = async (data) => {
+        setSubmitting(true);
+        const response = await apiService.post("/register",data);
+        if (response.data) {
+            // navigate("/login");
+            return;
+        }
+        setSubmitting(false);
+        alert(response.error);
+
+    }
+
     return {
         isSubmitting,
-        registerUser
+        registerUser,
+        registerAluno
     }
 }

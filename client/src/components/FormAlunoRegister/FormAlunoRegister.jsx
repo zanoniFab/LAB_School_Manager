@@ -5,7 +5,7 @@ import {validationSchema, defaultValues} from './FormSchema';
 import Button from '../Button';
 import { useNavigate } from 'react-router-dom';
 
-function FormRegister ({onSubmit,isSubmitting,initialValues=defaultValues}) {
+function FormAlunoRegister ({onSubmit,isSubmitting,initialValues=defaultValues}) {
     const navigate = useNavigate();
     const {register,
             handleSubmit,
@@ -43,28 +43,16 @@ function FormRegister ({onSubmit,isSubmitting,initialValues=defaultValues}) {
                 helperText = {errors?.cpf?.message}
             />
             <InputGroup
-                id='email' 
-                type='text'
-                {...register('email')}
-                helperText={errors?.email?.message}
-            />
-            <InputGroup
-                id='password' 
-                type='password'
-                {...register('password')}
-                helperText={errors?.password?.message}
-            />
-            <InputGroup
-                id='passwordConfirm' 
-                type='password'
-                {...register('passwordConfirm')}
-                helperText={errors?.passwordConfirm?.message}
+                id='nota' 
+                type='number'
+                labelText='Nota'
+                {...register('nota')}
+                helperText={errors?.nota?.message}
             />
             <Button type='button' onClick={()=>reset()}>Limpar</Button>
             <Button type='submit'disabled={isSubmitting}>Enviar</Button>
-            <Button type='button' onClick={()=>navigate("/login")}>Voltar</Button>
         </form>
     )
 }
 
-export default FormRegister;
+export default FormAlunoRegister;
