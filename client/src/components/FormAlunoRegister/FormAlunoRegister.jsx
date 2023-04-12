@@ -3,10 +3,8 @@ import InputGroup from '../InputGroup';
 import {yupResolver} from '@hookform/resolvers/yup';
 import {validationSchema, defaultValues} from './FormSchema';
 import Button from '../Button';
-import { useNavigate } from 'react-router-dom';
 
 function FormAlunoRegister ({onSubmit,isSubmitting,initialValues=defaultValues}) {
-    const navigate = useNavigate();
     const {register,
             handleSubmit,
             formState:{errors},

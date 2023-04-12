@@ -1,14 +1,14 @@
 import {useUserRegister } from '../../hooks/useUserRegister';
 import FormRegister from '../../components/FormRegister';
-
+import './RegisterPage.css'
 function RegisterPage () {
-    const {isSubmitting,registerUser} = useUserRegister();
+    const {isSubmitting, registerUser} = useUserRegister();
 
     return (
-        <>
-            <h3>Cadastro de Pedagogo</h3>
+        <div className='box-form'>
+            <h3>Cadastro de Usuário</h3>
             <FormRegister isSubmitting={isSubmitting} onSubmit={registerUser}/>
-        </>
+        </div>
     )
             
     }

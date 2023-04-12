@@ -10,7 +10,6 @@ export const useUserInfo = () => {
         setSubmitting(true);
         
         const response = await apiService.post(path, loginData)
-        console.log(response)
         setError(response.error);
         setData(response.data);
         setSubmitting(false);

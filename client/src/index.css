@@ -21,3 +21,8 @@ span {
   box-sizing: border-box;
   font-family: 'Inter', sans-serif;
 }
+
+.pageWrapperContainer {
+  display: flex;
+  flex-direction: column;
+}

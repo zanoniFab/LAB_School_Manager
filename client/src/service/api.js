@@ -17,12 +17,19 @@ const handleGet = async (endpoint) => {
 
 const handlePost = async (endpoint, data) => {
   try {
-    console.log(data)
     const response = await api.post(endpoint, data);
-
     return { data: response.data, error: null };
   } catch (error) {
-    return { data: null, error: error.message };
+    switch (error.response.data) {
+      case "Email already exists":
+        return { data: null, error: "E-mail já existe!" };
+
+      case "Cannot find user":
+      return { data: null, error: "Usuário não cadastrado" };
+
+      default:
+        return { data: null, error: error.message };
+    }
   }
 };
 

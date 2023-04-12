@@ -1,14 +1,16 @@
 import { useAuthenticationContext } from '../../hooks/useAuthentication/useAuthentication';
 import FormLogin from '../../components/FormLogin/FormLogin';
+import './LoginPage.css';
 
 function LoginPage () {
-  const {isSubmitting,login} = useAuthenticationContext();
+  const {isSubmitting, login} = useAuthenticationContext();
 
   return (
-    <>
-        <h3>Página de Login</h3>
+    <div className='box-login'>
+        <h3 className='title'>Bem-vindo ao</h3>
+        <h2>LAB School Manager!</h2>
         <FormLogin isSubmitting={isSubmitting} onSubmit={login}/>
-    </>
+    </div>
 )
 
 }

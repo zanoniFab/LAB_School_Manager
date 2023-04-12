@@ -8,3 +8,9 @@
   height: 100px;
   margin-left: 15px;
 }
+
+.navbar {
+  width: 100%;
+  position: absolute;
+  top: 0;
+}

@@ -2,31 +2,27 @@
   "users": [
     {
       "email": "zanonao@gmail.com",
-      "password": "$2a$10$HHiwgwVawmgdqOqMYESMY.rkGBUaNaypMBVNxQSeaBTBCzVS3lFgu",
+      "password": "$2a$10$YBJ4isZDJhk64ZnjgtMxR.Mfsa1SIl19H7UpcySyLpOc9j7msrlZi",
       "nome": "zanonao",
       "telefone": "",
       "dataNascimento": "",
       "cpf": "",
       "id": 1
-    },
-    {
-      "email": "teste@gmail.com",
-      "password": "$2a$10$bBQQsrPjpHZGoZNVKWe5fOOhx1HhucId9PuB309fB3k2RGEbD52nq",
-      "nome": "alalala",
-      "telefone": "",
-      "dataNascimento": "",
-      "cpf": "",
-      "id": 2
     }
   ],
   "students": [
     {
-      "name": "Teste aluno",
-      "phone": "(99) 99999-9999",
-      "birthdate": "01/01/1990",
-      "cpf": "999.999.999-99",
-      "grade": 80,
-      "id": 3
+      "Headers": {
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inphbm9uYW9AZ21haWwuY29tIiwiaWF0IjoxNjgxMzA3MzkyLCJleHAiOjE2ODEzMTA5OTIsInN1YiI6IjEifQ.LU1JpBfUQsJj_vkLB4n0viGtLDZJIgvPaLqwsLuEclM"
+      },
+      "Body": {
+        "nome": "Fabiane",
+        "telefone": "",
+        "dataNascimento": "",
+        "cpf": "",
+        "nota": 5
+      },
+      "id": 1
     }
   ],
   "accompaniments": [
