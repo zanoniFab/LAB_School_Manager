@@ -10,10 +10,7 @@ function HomePage ()  {
         <>
             <Header userName = {user?.name} />
             <div className="content-box">
-                <div className="box-menu-lateral">
-                    <h4>Menu</h4>
-                    <Button><Link to="/registerAluno">Cadastrar Aluno</Link></Button>      
-                </div>
+                
             </div>
         </>
 
