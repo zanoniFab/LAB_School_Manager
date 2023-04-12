@@ -27,7 +27,7 @@ export const useUserRegister = () => {
         const response = await apiService.post('/students', data);
         console.log("response",response);
         if (response.data) {
-            alert("Registrou");
+            alert("Aluno cadastrado com sucesso!");
             return;
         }
         setSubmitting(false);

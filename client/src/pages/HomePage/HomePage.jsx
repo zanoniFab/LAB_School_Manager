@@ -1,16 +1,19 @@
 import Header from "../../components/Header/Header";
 import { useAuthenticationContext } from "../../hooks/useAuthentication";
 import { Link } from "react-router-dom";
-
+import './HomePage.css';
+import Button from '../../components/Button';
 function HomePage ()  {
     const {user} = useAuthenticationContext();
     
     return (
         <>
-            <Header/>
+            <Header userName = {user?.name} />
             <div className="content-box">
-                <h3>Olá, {user?.name}!</h3>
-                <Link to="/registerAluno">Cadastrar Aluno</Link>
+                <div className="box-menu-lateral">
+                    <h4>Menu</h4>
+                    <Button><Link to="/registerAluno">Cadastrar Aluno</Link></Button>      
+                </div>
             </div>
         </>
 

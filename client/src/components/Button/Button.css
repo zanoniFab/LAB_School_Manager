@@ -8,3 +8,8 @@ button {
     padding: 3px;
     text-transform: uppercase;
 }
+
+a {
+    text-decoration: none;
+    color: white;
+}

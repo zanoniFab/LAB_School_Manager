@@ -3,8 +3,10 @@ import InputGroup from '../InputGroup';
 import {yupResolver} from '@hookform/resolvers/yup';
 import {validationSchema, defaultValues} from './FormSchema';
 import Button from '../Button';
+import { useNavigate } from 'react-router-dom';
 
 function FormAlunoRegister ({onSubmit,isSubmitting,initialValues=defaultValues}) {
+    const navigate = useNavigate();
     const {register,
             handleSubmit,
             formState:{errors},
@@ -16,14 +18,14 @@ function FormAlunoRegister ({onSubmit,isSubmitting,initialValues=defaultValues})
             <InputGroup 
                 id='nome' 
                 type='text' 
-                labelText='nome'
+                labelText='Nome'
                 {...register('nome')}
                 helperText = {errors?.nome?.message}
             />              
             <InputGroup 
                 id='telefone'
                 type='number' 
-                labelText='telefone' 
+                labelText='Telefone' 
                 {...register('telefone')}
             />
             <InputGroup 
@@ -47,8 +49,11 @@ function FormAlunoRegister ({onSubmit,isSubmitting,initialValues=defaultValues})
                 {...register('nota')}
                 helperText={errors?.nota?.message}
             />
-            <Button type='button' onClick={()=>reset()}>Limpar</Button>
-            <Button type='submit'disabled={isSubmitting}>Enviar</Button>
+            <div className='box-buttons'>
+                <Button type='button' onClick={()=>navigate("/home")}>Voltar</Button>
+                <Button type='button' onClick={()=>reset()}>Limpar</Button>
+                <Button type='submit'disabled={isSubmitting}>Enviar</Button>
+            </div>
         </form>
     )
 }
