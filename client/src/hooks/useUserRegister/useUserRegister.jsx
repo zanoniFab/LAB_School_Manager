@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import { apiService } from '../../service/api';
 import { useNavigate } from 'react-router-dom';
-
+import { useUserInfo } from '../useUserInfo/useUserInfo';
 export const useUserRegister = () => {
     const [isSubmitting, setSubmitting] = useState(false);
     const navigate = useNavigate();
+    const {loginRequest} = useUserInfo();
 
     const registerUser = async (data)=> {
         setSubmitting(true);
@@ -21,9 +22,12 @@ export const useUserRegister = () => {
 
     const registerAluno = async (data) => {
         setSubmitting(true);
-        const response = await apiService.post("/register",data);
+        const token = localStorage.getItem("token");
+
+        const response = await apiService.post('/students', data);
+        console.log("response",response);
         if (response.data) {
-            alert("Registrou");
+            alert("Aluno cadastrado com sucesso!");
             return;
         }
         setSubmitting(false);

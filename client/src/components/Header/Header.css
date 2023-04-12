@@ -1,10 +1,23 @@
+.navbar {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  display: flex;
+  background-color: #19376D;
+  align-items: center;
+}
+
 .logo {
   width: 100%;
   height: 100px;
-  background-color: rgb(17, 33, 136);
 }
 
 .logo img {
   height: 100px;
   margin-left: 15px;
+}
+
+.box-info {
+  color: white;
+  text-transform: capitalize;
 }

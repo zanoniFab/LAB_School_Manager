@@ -7,7 +7,7 @@ const InputGroup = forwardRef(
     const refId = useMemo(() => id ?? labelText, [id, labelText]);
 
     return (
-      <div className="container">
+      <div className="container box-input-group">
         {labelText && (
           <label htmlFor={refId} className="label">
             {labelText}

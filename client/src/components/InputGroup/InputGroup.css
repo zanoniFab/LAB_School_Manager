@@ -1,0 +1,23 @@
+input {
+    border-radius: 6px;
+    border: 1px solid grey;
+    padding: 3px;
+
+}
+
+label {
+    font-size: 12px;
+    display: flex;
+    margin: 8px 0 3px 0;
+}
+
+span {
+    color: red;
+    font-size: 10px;
+    margin-top: 4px;
+}
+
+.box-input-group {
+    display: flex;
+    flex-direction: column;
+}

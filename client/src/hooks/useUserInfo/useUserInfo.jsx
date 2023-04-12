@@ -7,10 +7,10 @@ export const useUserInfo = () => {
     const [error,setError] = useState(null);
     
     const loginRequest = async (path, loginData) => {
+
         setSubmitting(true);
         
-        const response = await apiService.post(path, loginData)
-        console.log(response)
+        const response = await apiService.post(path, loginData);
         setError(response.error);
         setData(response.data);
         setSubmitting(false);

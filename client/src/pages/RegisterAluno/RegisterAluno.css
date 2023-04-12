@@ -1,0 +1,9 @@
+.box-form {
+    background-color: #A5D7E8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    border-radius: 5px;
+    padding: 10px;
+}

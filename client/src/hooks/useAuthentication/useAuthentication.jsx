@@ -18,11 +18,11 @@ export const AuthenticationProvider = ({children}) => {
         if (data) {
             setUser({id:data.user.id,name:data.user.nome});
             localStorage.setItem('token',data.accessToken);
-            navigate('/registerAluno');
+            navigate('/home');
         }
     }
 
-    const logout = (email,password) => {
+    const logout = () => {
         localStorage.removeItem("token");
         setUser(null);
         navigate('/login');

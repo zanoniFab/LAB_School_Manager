@@ -7,7 +7,7 @@ export const validationSchema = Yup.object(
         password: Yup.string().required('Senha obrigatória').min(8,'A senha deve conter no mínimo 8 caracteres'),
         passwordConfirm: Yup.string()
             .required('Campo obrigatório')
-            .oneOf([Yup.ref('password')], 'A senhas não conferem'),
+            .oneOf([Yup.ref('password')], 'As senhas não conferem'),
     });
 
 export const defaultValues = {
