@@ -12,16 +12,11 @@
   ],
   "students": [
     {
-      "Headers": {
-        "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inphbm9uYW9AZ21haWwuY29tIiwiaWF0IjoxNjgxMzA3MzkyLCJleHAiOjE2ODEzMTA5OTIsInN1YiI6IjEifQ.LU1JpBfUQsJj_vkLB4n0viGtLDZJIgvPaLqwsLuEclM"
-      },
-      "Body": {
-        "nome": "Fabiane",
-        "telefone": "",
-        "dataNascimento": "",
-        "cpf": "",
-        "nota": 5
-      },
+      "nome": "aaaaaaaaa",
+      "telefone": "",
+      "dataNascimento": "",
+      "cpf": "",
+      "nota": 5,
       "id": 1
     }
   ],

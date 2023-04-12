@@ -23,10 +23,10 @@ const handlePost = async (endpoint, data) => {
     switch (error.response.data) {
       case "Email already exists":
         return { data: null, error: "E-mail já existe!" };
-
+      
       case "Cannot find user":
       return { data: null, error: "Usuário não cadastrado" };
-
+    
       default:
         return { data: null, error: error.message };
     }

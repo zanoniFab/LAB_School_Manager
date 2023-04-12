@@ -21,11 +21,11 @@ export const useUserRegister = () => {
     }
 
     const registerAluno = async (data) => {
-        const token = localStorage.getItem("token");
         setSubmitting(true);
+        const token = localStorage.getItem("token");
 
-        //const response = await apiService.post("/students",data);
-        const response = await apiService.post(loginRequest('/students', {Headers: {Authorization: `Bearer ${token}`}, Body: data}));
+        const response = await apiService.post('/students', data);
+        console.log("response",response);
         if (response.data) {
             alert("Registrou");
             return;
