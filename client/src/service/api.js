@@ -7,6 +7,7 @@ const api = axios.create({
 
 const handleGet = async (endpoint) => {
   try {
+    console.log("get",endpoint);
     const response = await api.get(endpoint);
 
     return { data: response.data, error: null };

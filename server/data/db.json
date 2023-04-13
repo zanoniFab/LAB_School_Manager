@@ -40,11 +40,11 @@
     {
       "id": 1,
       "studentId": 3,
-      "userId": 2,
+      "userId": 1,
       "date": "27/03/2023",
       "title": "Acompanhamento teste",
       "description": "Descrição do acompanhamento",
-      "finished": true
+      "finished": false
     }
   ]
 }
