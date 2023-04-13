@@ -5,10 +5,10 @@ function Header({...props}) {
     return (
       <header className="navbar">
 
-        <img src="../logo765x625.png"></img>
+        <img alt="logo" src="../logo765x625.png"></img>
 
         <div className="box-buttons">
-          <Link to="/inicio">Início(item4)</Link>
+          <Link to="/home">Início(item4)</Link>
           <Link to="/listagemAlunos">Alunos(item5)</Link>
           <Link to="/acompanhamentosPedagógicos">Acompanhamentos Pedagógicos(item7)</Link>
           <Link to="/login">Sair</Link>  
