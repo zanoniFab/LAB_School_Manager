@@ -5,6 +5,8 @@ import useAtendimentoList from "../../hooks/useAtendimentoList/useAtendimentoLis
 import { useAuthenticationContext } from "../../hooks/useAuthentication";
 import './HomePage.css';
 import { useEffect, useState } from "react";
+import CardAcompanhamentoPedagogico from "../../components/CardAcompanhamentoPedagogico";
+
 function HomePage ()  {
     const {user} = useAuthenticationContext();
     const {isLoading, error, getListaAtendimento} = useAtendimentoList();
@@ -26,7 +28,10 @@ function HomePage ()  {
                 {!user && <Link to="/login">Faça o Login</Link>}
                 {!isLoading && !!error && <p>{error}</p>}
                 {user && !listaAtendimentos.length && (<p>Não há atendimento cadastrado</p>)}
-                {user && !isLoading && !!listaAtendimentos.length && (<ListAtendimentos list={listaAtendimentos} />)}
+                {user && !isLoading && !!listaAtendimentos.length && (
+                    <ListAtendimentos 
+                        children={<CardAcompanhamentoPedagogico list={listaAtendimentos} />}   
+                    />)}
             </div>
         </>
 

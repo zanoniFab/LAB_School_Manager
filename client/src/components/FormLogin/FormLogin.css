@@ -1,0 +1,10 @@
+.register-button {
+    width: 90%;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+
+.register-button a {
+    color: black
+}

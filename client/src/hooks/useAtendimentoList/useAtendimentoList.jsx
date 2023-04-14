@@ -17,11 +17,23 @@ const useAtendimentoList = () => {
     return response.data;
   };
 
+  const getListaAtendimentoByTitulo = async (titulo) => {
+    setIsLoading(true);
+    const paramFilter = titulo ? `?title_like=${titulo}` : "";
+    const response = await apiService.get(`/accompaniments${paramFilter}`);
+    setError(response.error);
+    setData(response.data);
+    setIsLoading(false);
+
+    return response.data;
+  };
+
   return {
     atendimentos: data,
     isLoading,
     error,
     getListaAtendimento,
+    getListaAtendimentoByTitulo
   };
 };
 

@@ -22,7 +22,14 @@ span {
   font-family: 'Inter', sans-serif;
 }
 
-.pageWrapperContainer {
+body {
+  min-height: 100vh;
+  font-family: sans-serif;
+  
+}
+
+#root {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }

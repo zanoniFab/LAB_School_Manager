@@ -1,1 +1,1 @@
-export {default} from './ListAcompanhamentoPedagogico';
+export {default} from './ListAtendimentos';

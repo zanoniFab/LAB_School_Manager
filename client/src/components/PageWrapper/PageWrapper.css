@@ -1,0 +1,7 @@
+.pageWrapperContainer {
+  background-color: #0B2447;
+  padding: 56px 64px;;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  }

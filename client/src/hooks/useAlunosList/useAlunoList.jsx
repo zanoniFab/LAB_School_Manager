@@ -10,7 +10,7 @@ const useAlunosList = () => {
 
   const getListaAlunos = async (filter) => {
     setIsLoading(true);
-    const paramFilter = filter ? `?name_like=${filter}` : "";
+    const paramFilter = filter ? `?nome_like=${filter}` : "";
     const response = await apiService.get(`/students${paramFilter}`);
     setError(response.error);
     setData(response.data);

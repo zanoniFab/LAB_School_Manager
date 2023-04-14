@@ -1,0 +1,15 @@
+.box-filter {
+    display: flex;
+    align-items: center;
+}
+
+.box-filter .box-input-group input, .filter-button {
+    height: 30px;
+    margin: 10px;
+    padding: 0;
+}
+
+.filter-button {
+    width: 200px;
+    font-size: 14px;
+}

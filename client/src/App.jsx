@@ -6,6 +6,7 @@ import RegisterAluno from './pages/RegisterAluno/RegisterAluno';
 import { AuthenticationProvider } from './hooks/useAuthentication';
 import HomePage from './pages/HomePage';
 import AlunosPage from './pages/AlunosPage';
+import AcompanhamentosPage from './pages/AcompanhamentosPage';
 
 function App() {
 
@@ -19,7 +20,7 @@ function App() {
                 <Route path="/home" element={<HomePage />}/>
                 <Route path="/registerAluno" element={<RegisterAluno />}/>
                 <Route path="/listagemAlunos" element={<AlunosPage />}/>
-                listagemAlunos
+                <Route path="/acompanhamentosPedagogicos" element={<AcompanhamentosPage />}/>
               </Routes>
           </PageWrapper>
       </AuthenticationProvider>

@@ -3,7 +3,8 @@ import InputGroup from '../InputGroup';
 import {yupResolver} from '@hookform/resolvers/yup';
 import {validationSchema, defaultValues} from './LoginSchema';
 import Button from '../Button';
-import { Link, useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import './FormLogin.css';
 
 function FormLogin ({onSubmit,isSubmitting,initialValues=defaultValues}) {
     const {register,
@@ -32,7 +33,9 @@ function FormLogin ({onSubmit,isSubmitting,initialValues=defaultValues}) {
                 />
                 <Button type='submit' disabled={isSubmitting}>Entrar</Button>
             </form>
-            <Link to="/registerPage">Criar conta</Link>
+            <div className="register-button">
+                <Link to="/registerPage">Criar conta</Link>
+            </div>
         </>
 
     )
