@@ -4,19 +4,16 @@ import ListAtendimentos from "../../components/ListAtendimentos/ListAtendimentos
 import useAtendimentoList from "../../hooks/useAtendimentoList/useAtendimentoList";
 import { useAuthenticationContext } from "../../hooks/useAuthentication";
 import './HomePage.css';
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import CardAcompanhamentoPedagogico from "../../components/CardAcompanhamentoPedagogico";
 
 function HomePage ()  {
     const {user} = useAuthenticationContext();
-    const {isLoading, error, getListaAtendimento} = useAtendimentoList();
-    const navigate = useNavigate();
-    const [listaAtendimentos, setListaAtendimentos] = useState([]);
+    const {atendimentos, isLoading, error, getListaAtendimento} = useAtendimentoList();
 
     useEffect( () => {
         (async () => {
-                const response = await getListaAtendimento(user?.id);
-                setListaAtendimentos(response);
+            await getListaAtendimento(user?.id);
         })()
     },[]);
 
@@ -27,10 +24,10 @@ function HomePage ()  {
             <div className="content-box">
                 {!user && <Link to="/login">Faça o Login</Link>}
                 {!isLoading && !!error && <p>{error}</p>}
-                {user && !listaAtendimentos.length && (<p>Não há atendimento cadastrado</p>)}
-                {user && !isLoading && !!listaAtendimentos.length && (
+                {user && !atendimentos.length && (<p>Não há atendimento cadastrado</p>)}
+                {user && !isLoading && !!atendimentos.length && (
                     <ListAtendimentos 
-                        children={<CardAcompanhamentoPedagogico list={listaAtendimentos} />}   
+                        children={<CardAcompanhamentoPedagogico list={atendimentos} />}   
                     />)}
             </div>
         </>

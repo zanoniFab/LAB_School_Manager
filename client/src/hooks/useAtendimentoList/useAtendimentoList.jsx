@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { apiService } from "../../service/api";
 
 const useAtendimentoList = () => {
-  const [data, setData] = useState();
+  const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
@@ -13,9 +13,8 @@ const useAtendimentoList = () => {
     setError(response.error);
     setData(response.data);
     setIsLoading(false);
-
-    return response.data;
   };
+
 
   const getListaAtendimentoByTitulo = async (titulo) => {
     setIsLoading(true);

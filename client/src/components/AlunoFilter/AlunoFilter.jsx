@@ -7,10 +7,12 @@ function AlunoFilter ({onFilter}) {
     
     const handleChangeFilter = (event) => {
         setFilter(event.target.value);
+        console.log("Aluno filter",filter);
       };
 
     const handleClickFilter = () => {
-    onFilter(filter);
+        console.log("filter handleclick",filter);
+        onFilter(filter);
     };
 
     return (
