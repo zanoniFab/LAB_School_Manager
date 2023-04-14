@@ -8,8 +8,8 @@ function Header({...props}) {
         <img alt="logo" src="../logo765x625.png"></img>
 
         <div className="box-buttons">
-          <Link to="/home">Início(item4)</Link>
-          <Link to="/listagemAlunos">Alunos(item5)</Link>
+          <Link to="/home">Início</Link>
+          <Link to="/listagemAlunos">Alunos</Link>
           <Link to="/acompanhamentosPedagógicos">Acompanhamentos Pedagógicos(item7)</Link>
           <Link to="/login">Sair</Link>  
         </div>

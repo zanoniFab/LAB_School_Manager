@@ -12,7 +12,7 @@
   ],
   "students": [
     {
-      "nome": "aaaaaaaaa",
+      "nome": "Silvana",
       "telefone": "",
       "dataNascimento": "",
       "cpf": "",
@@ -28,12 +28,20 @@
       "id": 2
     },
     {
-      "nome": "Fabiane",
+      "nome": "Derick",
       "telefone": "999999999",
       "dataNascimento": "1992-06-07",
       "cpf": "8470606634",
       "nota": 10,
       "id": 3
+    },
+    {
+      "nome": "Fabiane Zanoni",
+      "telefone": "999999999",
+      "dataNascimento": "1992-06-07",
+      "cpf": "8470606634",
+      "nota": 10,
+      "id": 4
     }
   ],
   "accompaniments": [
