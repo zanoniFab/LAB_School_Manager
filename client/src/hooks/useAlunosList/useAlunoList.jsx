@@ -8,14 +8,23 @@ const useAlunosList = () => {
   const [error, setError] = useState(null);
 
 
-  const getListaAlunos = async (filter) => {
+  const getListaAlunosByName = async (filter) => {
     setIsLoading(true);
-    const paramFilter = filter ? `?name_like=${filter}` : "";
+    const paramFilter = filter ? `?nome_like=${filter}` : "";
     const response = await apiService.get(`/students${paramFilter}`);
     setError(response.error);
     setData(response.data);
     setIsLoading(false);
+    return response.data;
+  };
+  console.log("data",data);
 
+  const getListaAlunos = async () => {
+    setIsLoading(true);
+    const response = await apiService.get(`/students`);
+    setError(response.error);
+    setData(response.data);
+    setIsLoading(false);
     return response.data;
   };
 
@@ -27,6 +36,7 @@ const useAlunosList = () => {
     alunos: data,
     isLoading,
     error,
+    getListaAlunosByName,
     getListaAlunos,
   };
 };

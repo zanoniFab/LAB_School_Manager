@@ -42,6 +42,22 @@
       "cpf": "8470606634",
       "nota": 10,
       "id": 4
+    },
+    {
+      "nome": "jose",
+      "telefone": "999999999",
+      "dataNascimento": "1992-06-07",
+      "cpf": "8470606634",
+      "nota": 10,
+      "id": 5
+    },
+    {
+      "nome": "josé",
+      "telefone": "999999999",
+      "dataNascimento": "1992-07-06",
+      "cpf": "8470606634",
+      "nota": 10,
+      "id": 6
     }
   ],
   "accompaniments": [
@@ -51,6 +67,24 @@
       "userId": 1,
       "date": "27/03/2023",
       "title": "Acompanhamento teste",
+      "description": "Descrição do acompanhamento",
+      "finished": false
+    },
+    {
+      "id": 2,
+      "studentId": 1,
+      "userId": 1,
+      "date": "01/03/2021",
+      "title": "Teste 01",
+      "description": "Descrição do acompanhamento",
+      "finished": false
+    },
+    {
+      "id": 3,
+      "studentId": 3,
+      "userId": 1,
+      "date": "02/02/2022",
+      "title": "Teste 02",
       "description": "Descrição do acompanhamento",
       "finished": false
     }

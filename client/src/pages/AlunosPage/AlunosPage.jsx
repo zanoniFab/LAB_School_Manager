@@ -8,9 +8,8 @@ import useAlunosList from '../../hooks/useAlunosList';
 import ListAlunos from '../../components/ListAlunos';
 function AlunosPage ()  {
     const {user} = useAuthenticationContext();
-    const {isLoading, error, getListaAlunos} = useAlunosList();
+    const {alunos, isLoading, error, getListaAlunosByName, getListaAlunos} = useAlunosList();
     const navigate = useNavigate();
-    const [listaAlunos, setListaAlunos] = useState([]);
 
     const handleClick = () => {
         navigate("/registerAluno");
@@ -18,24 +17,22 @@ function AlunosPage ()  {
 
     useEffect( () => {
         (async () => {
-                const response = await getListaAlunos();
-                setListaAlunos(response);
+            await getListaAlunos();
         })()
     },[]);
-
     
     return (
         <>
             <Header userName = {user?.name} />
             <div className="content-box">
                 <div className="box-top">
-                    <AlunoFilter onFilter={getListaAlunos} />
+                    <AlunoFilter onFilter={getListaAlunosByName} />
                     <Button onClick={handleClick}>Cadastrar Aluno</Button>
                 </div>
                 {!user && <Link to="/login">Faça o Login</Link>}
                 {!isLoading && !!error && <p>{error}</p>}
-                {user && !listaAlunos.length && (<p>Não há aluno cadastrado</p>)}
-                {user && !isLoading && !!listaAlunos.length && (<ListAlunos list={listaAlunos} />)}
+                {user && !alunos.length && (<p>Não há aluno cadastrado</p>)}
+                {user && !isLoading && !!alunos.length && (<ListAlunos list={alunos} />)}
             </div>
         </>
 

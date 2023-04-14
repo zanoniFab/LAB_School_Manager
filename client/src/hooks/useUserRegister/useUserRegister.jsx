@@ -25,9 +25,10 @@ export const useUserRegister = () => {
         const token = localStorage.getItem("token");
 
         const response = await apiService.post('/students', data);
-        console.log("response",response);
+
         if (response.data) {
             alert("Aluno cadastrado com sucesso!");
+            navigate("/listagemAlunos");
             return;
         }
         setSubmitting(false);

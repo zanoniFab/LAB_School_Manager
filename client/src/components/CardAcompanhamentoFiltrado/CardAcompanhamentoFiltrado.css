@@ -1,0 +1,27 @@
+.content-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.box-top {
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.box-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-6) var(--spacing-8);
+}
+
+li {
+    background-color: white;
+    margin: 5px;
+    list-style: none;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    padding: 5px;
+}
