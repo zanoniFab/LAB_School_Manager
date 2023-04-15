@@ -5,7 +5,8 @@ export const useUserInfo = () => {
     const [isSubmitting, setSubmitting] = useState(false);
     const [data,setData] = useState();
     const [error,setError] = useState(null);
-    
+    const [listaPedagogos, setListaPedagogos] = useState([]); 
+
     const loginRequest = async (path, loginData) => {
 
         setSubmitting(true);
@@ -22,10 +23,20 @@ export const useUserInfo = () => {
         
     }
 
+    const getListaPedagogos = async () => {
+        setSubmitting(true);
+        const response = await apiService.get(`/users`);
+        setError(response.error);
+        setListaPedagogos(response.data);
+        setSubmitting(false);
+      };
+
     return {
         user: data,
+        listaPedagogos,
         error,
         isSubmitting,
-        loginRequest
+        loginRequest,
+        getListaPedagogos
     }
 }

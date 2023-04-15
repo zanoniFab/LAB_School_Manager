@@ -1,0 +1,1 @@
+export {useAtendimentoRegister} from './useAtendimentoRegister';

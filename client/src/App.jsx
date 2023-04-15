@@ -7,6 +7,7 @@ import { AuthenticationProvider } from './hooks/useAuthentication';
 import HomePage from './pages/HomePage';
 import AlunosPage from './pages/AlunosPage';
 import AcompanhamentosPage from './pages/AcompanhamentosPage';
+import RegisterAtendimento from './pages/RegisterAtendimento';
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
                 <Route path="/registerAluno" element={<RegisterAluno />}/>
                 <Route path="/listagemAlunos" element={<AlunosPage />}/>
                 <Route path="/acompanhamentosPedagogicos" element={<AcompanhamentosPage />}/>
+                <Route path="/cadastroAtendimento" element={<RegisterAtendimento />}/>
               </Routes>
           </PageWrapper>
       </AuthenticationProvider>

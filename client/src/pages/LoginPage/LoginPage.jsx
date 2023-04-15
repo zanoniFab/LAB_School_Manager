@@ -3,6 +3,7 @@ import FormLogin from '../../components/FormLogin/FormLogin';
 import './LoginPage.css';
 
 function LoginPage () {
+  
   const {isSubmitting, login} = useAuthenticationContext();
 
   return (

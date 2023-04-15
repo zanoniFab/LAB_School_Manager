@@ -6,15 +6,15 @@ function CardAcompanhamentoPedagogico ({list}) {
     const handleNavigateEdit = () => {
         navigate(`/editarAtendimento/${id}`);
     }
-    console.log(list)
+
     return (
         <ul>
             {list.map((item)=> (
                 <li key={item.id}>
-                    <p>Nome do Aluno: {item.studentId}</p>
-                    <p>Nome do Pedagogo: {item.userId}</p>
-                    <p>Data do atendimento: {item.date}</p>
-                    <p>Titulo: {item.title}</p>
+                    <p>Nome do Aluno: {item.nomeAluno}</p>
+                    <p>Nome do Pedagogo: {item.nomePedagogo}</p>
+                    <p>Data do atendimento: {item.dataAcompanhamento}</p>
+                    <p>Titulo: {item.titulo}</p>
                     <Button onClick={handleNavigateEdit}>Editar</Button>
                 </li>
             ))}

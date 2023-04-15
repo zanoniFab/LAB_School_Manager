@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { apiService } from '../../service/api';
 import { useNavigate } from 'react-router-dom';
-import { useUserInfo } from '../useUserInfo/useUserInfo';
+import { useUserInfo }  from '../useUserInfo/useUserInfo';
 export const useUserRegister = () => {
     const [isSubmitting, setSubmitting] = useState(false);
     const navigate = useNavigate();
