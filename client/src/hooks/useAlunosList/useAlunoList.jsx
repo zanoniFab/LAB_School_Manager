@@ -17,7 +17,6 @@ const useAlunosList = () => {
     setIsLoading(false);
     return response.data;
   };
-  console.log("data",data);
 
   const getListaAlunos = async () => {
     setIsLoading(true);

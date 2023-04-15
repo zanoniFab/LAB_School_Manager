@@ -1,5 +1,5 @@
 import { useState, createContext, useContext } from "react";
-import { useUserInfo } from "../useUserInfo/useUserInfo";
+import { useUserInfo }  from '../useUserInfo/useUserInfo';
 import { useNavigate } from "react-router-dom";
 
 const AuthenticationContext = createContext({});
