@@ -16,11 +16,11 @@ function FormAlunoRegister ({onSubmit,isSubmitting,initialValues=defaultValues})
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
             <InputGroup 
-                id='nome' 
+                id='nomeAluno' 
                 type='text' 
                 labelText='Nome'
                 {...register('nome')}
-                helperText = {errors?.nome?.message}
+                helperText = {errors?.nomeAluno?.message}
             />              
             <InputGroup 
                 id='telefone'

@@ -1,12 +1,12 @@
 .navbar-container {
   color: white;
-  height: 80px;
+  height: 90px;
   width: 100%;
   background-color: #19376D;
   display: flex;
+  flex-grow: 1;
   justify-content: space-between;
   align-items: center;
-  justify-content: space-between;
   position: absolute;
   top: 0;
   left: 0;
@@ -14,18 +14,28 @@
 
 .box-logo img {
   height: 80px;
+  position: absolute;
+  top: 0;
 }
 
 .box-user {
   display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: -50px;
   align-items: center;
+  height: 25px;
+  position: absolute;
+  left: 10px;
+  top: 60px;
+  width: fit-content;
+
 }
 
 .box-user .username {
   text-transform: capitalize;
-  margin-right: 30px;
   font-size: 12px;
+  width: 120px;
 }
 
 .box-user a {
@@ -45,13 +55,21 @@ a {
   align-items: center;
   font-size: 12px;
   height: 20px;
-  padding: 5px;
   margin: 0 ;
   text-transform: uppercase;
-  width: 40px;
+  width: fit-content;
   margin: 10px;
 }
 
 a:hover {
   background-color: #576CBC;
+}
+
+.logout-button {
+  position: absolute;
+  right: 10px;
+  top: -5px;
+  background-color: none;
+  width: fit-content;
+
 }

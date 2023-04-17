@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import SelectGroup from '../SelectGroup';
 import { useAtendimentoRegister } from '../../hooks/useAtendimentoRegister';
 import { useEffect } from 'react';
-
+import './FormCadastroAtendimento.css';
 function FormCadastroAtendimento ({onSubmit,isSubmitting,initialValues=defaultValues}) {
     const navigate = useNavigate();
     const {listaPedagogos, listaAlunos, getListas} = useAtendimentoRegister();
@@ -17,9 +17,9 @@ function FormCadastroAtendimento ({onSubmit,isSubmitting,initialValues=defaultVa
             reset} = useForm({resolver: yupResolver(validationSchema),defaultValues:initialValues});
 
     useEffect( () => {
-        (async () => {
-            await getListas();
-        })()
+
+        getListas();
+
     },[]);
 
 

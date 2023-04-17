@@ -7,12 +7,11 @@ import Button from "../../components/Button/Button";
 import useAtendimentoList from '../../hooks/useAtendimentoList';
 import ListAtendimentos from "../../components/ListAtendimentos";
 import CardAcompanhamentoFiltrado from "../../components/CardAcompanhamentoFiltrado";
-
+import './AcompanhamentosPage.css';
 function AcompanhamentosPage ()  {
     const {user} = useAuthenticationContext();
-    const {isLoading, error, getListaAtendimentoByTitulo} = useAtendimentoList();
+    const {atendimentos, isLoading, error, getListaAtendimentoByTitulo, getListaAtendimento} = useAtendimentoList();
     const navigate = useNavigate();
-    const [listaAtendimentos, setListaAtendimentos] = useState([]);
 
     const handleClick = () => {
         navigate("/cadastroAtendimento");
@@ -20,28 +19,31 @@ function AcompanhamentosPage ()  {
 
     useEffect( () => {
         (async () => {
-                const response = await getListaAtendimentoByTitulo();
-                setListaAtendimentos(response);
+            await getListaAtendimento(user?.id);
         })()
     },[]);
 
     
     return (
         <>
-            <Header userName = {user?.name} />
-            <div className="content-box">
-                <div className="box-top">
-                    <AtendimentoFilter onFilter={getListaAtendimentoByTitulo} />
-                    <Button className="filter-button" onClick={handleClick}>Cadastrar Atendimento</Button>
-                </div>
-                {!user && <Link to="/login">Faça o Login</Link>}
-                {!isLoading && !!error && <p>{error}</p>}
-                {user && !listaAtendimentos.length && (<p>Não encontrado</p>)}
-                {user && !isLoading && !!listaAtendimentos.length && (
-                    <ListAtendimentos 
-                        children={<CardAcompanhamentoFiltrado list={listaAtendimentos} />}   
-                    />)}
-            </div>
+            {!user && <Link to="/login">Faça o Login</Link>}
+            {user && (
+                <>
+                    <Header userName = {user?.name} />
+                    <div className="content-box">
+                        <div className="box-filter">
+                            <AtendimentoFilter onFilter={getListaAtendimentoByTitulo} />
+                            <Button onClick={handleClick}>Cadastrar Atendimento</Button>
+                        </div>
+                        {!isLoading && !!error && <p>{error}</p>}
+                        {user && !atendimentos.length && (<p className="error">Não há atendimentos cadastrados</p>)}
+                        {user && !isLoading && !!atendimentos.length && (
+                            <ListAtendimentos 
+                                children={<CardAcompanhamentoFiltrado list={atendimentos} />}   
+                            />)}
+                    </div>
+                </>
+                )}
         </>
 
     )

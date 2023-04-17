@@ -1,8 +1,7 @@
 import CardAluno from "../CardAluno";
-
+import './ListAlunos.css'
 
 function ListAlunos({list}) {
-
     return (
         <div className="list-alunos">
             <ul>

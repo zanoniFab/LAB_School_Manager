@@ -1,0 +1,9 @@
+.select-box, select {
+    width: 100%;
+    text-align: center;
+}
+
+select {
+    margin: 5px 0;
+    border-radius: 3px;
+}

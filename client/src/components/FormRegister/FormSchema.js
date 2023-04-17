@@ -11,12 +11,12 @@ export const validationSchema = Yup.object(
     });
 
 export const defaultValues = {
-    nome: 'zanonao',
+    nome: '',
     telefone: '',
     dataNascimento: '',
     cpf: '',
-    email: 'zanonao@gmail.com',
-    password: '12345678',
-    passwordConfirm: '12345678'
+    email: '',
+    password: '',
+    passwordConfirm: ''
 }
 

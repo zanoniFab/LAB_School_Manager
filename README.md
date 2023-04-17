@@ -1,3 +1,7 @@
+
+# LAB_School_Manager
+
+
 Projeto avaliativo em React do módulo 2 do curso DEVinHouse.
 
 Para utilizar o projeto, basta clonar o repositório com o comando:
@@ -13,6 +17,7 @@ A seguir, um passo a passo a ser executado para rodar o projeto:
 ```
 // Acessar a pasta client do projeto
 cd LAB_School_Manager/client
+
 // Instalar as dependências do projeto
 npm install
 ```
@@ -28,6 +33,7 @@ npm run dev
 ```
 // Acessar a pasta "server" do projeto
 cd LAB_School_Manager/server
+
 // Instalar as dependências do projeto
 npm install
 ```
@@ -50,4 +56,7 @@ O projeto desenvolvido tem como objetivo automatizar algumas ações de atendime
 
 ## Tecnologias utilizadas:
 
+
 HTML, css, Javascript, React,
+
+

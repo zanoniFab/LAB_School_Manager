@@ -11,10 +11,10 @@ export const validationSchema = Yup.object(
     });
 
 export const defaultValues = {
-    nomeAluno: "Derick",
-    nomePedagogo: "Zanonao",
-    dataAcompanhamento: "07/06/1992",
-    titulo: "Titulo de teste",
-    descricao: "Descrição teste",  
-    finalizado: false,    
+    nomeAluno: "",
+    nomePedagogo: "",
+    dataAcompanhamento: "",
+    titulo: "",
+    descricao: "",  
+    finalizado: "",    
 }

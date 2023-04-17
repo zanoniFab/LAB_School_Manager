@@ -9,8 +9,7 @@ function RegisterPage () {
             <h3>Cadastro de Usuário</h3>
             <FormRegister isSubmitting={isSubmitting} onSubmit={registerUser}/>
         </div>
-    )
-            
+    )        
     }
 
 export default RegisterPage;

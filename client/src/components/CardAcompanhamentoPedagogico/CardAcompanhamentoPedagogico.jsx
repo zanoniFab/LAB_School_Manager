@@ -1,6 +1,6 @@
 import Button from "../Button/Button";
 import {useNavigate} from "react-router-dom";
-
+import './CardAcompanhamentoPedagogico.css'
 function CardAcompanhamentoPedagogico ({list}) {
     const navigate = useNavigate();
     const handleNavigateEdit = () => {

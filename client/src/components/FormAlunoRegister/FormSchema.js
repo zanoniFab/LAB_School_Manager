@@ -10,9 +10,9 @@ export const validationSchema = Yup.object(
     });
 
 export const defaultValues = {
-    nome: 'Fabiane',
-    telefone: '999999999',
+    nome: '',
+    telefone: '',
     dataNascimento: '',
-    cpf: '8470606634',
-    nota: 10,
+    cpf: '',
+    nota: ''
 }

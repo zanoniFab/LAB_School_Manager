@@ -14,14 +14,14 @@ function AtendimentoFilter ({onFilter}) {
     };
 
     return (
-        <div className="box-filter">
+        <div className="filter-buttons">
             <InputGroup
                 type="text"
                 placeholder="Digite o título do atendimento"
                 value={filter}
                 onChange={handleChangeFilter}
             />
-            <Button className="filter-button" onClick={handleClickFilter}>Buscar</Button>
+            <Button onClick={handleClickFilter}>Buscar</Button>
         </div>
     )
 }
