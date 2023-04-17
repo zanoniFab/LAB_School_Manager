@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Header from "../../components/Header/Header";
 import ListAtendimentos from "../../components/ListAtendimentos/ListAtendimentos";
 import useAtendimentoList from "../../hooks/useAtendimentoList/useAtendimentoList";
@@ -12,24 +12,26 @@ function HomePage ()  {
     const {atendimentos, isLoading, error, getListaAtendimento} = useAtendimentoList();
 
     useEffect( () => {
-        (async () => {
-            await getListaAtendimento(user?.id);
-        })()
+        getListaAtendimento(user?.id);
     },[]);
 
 
     return (
         <>
-            <Header userName = {user?.name} />
-            <div className="content-box">
-                {!user && <Link to="/login">Faça o Login</Link>}
-                {!isLoading && !!error && <p>{error}</p>}
-                {user && !atendimentos.length && (<p>Não há atendimento cadastrado</p>)}
-                {user && !isLoading && !!atendimentos.length && (
-                    <ListAtendimentos 
-                        children={<CardAcompanhamentoPedagogico list={atendimentos} />}   
-                    />)}
-            </div>
+            {!user && <Link to="/login">Faça o Login</Link>}
+            {user && (
+                <>
+                    <Header userName = {user?.name} />
+                    <div className="content-box">
+                        {!isLoading && !!error && <p>{error}</p>}
+                        {!isLoading && !error && !atendimentos.length && (<p>Não há atendimento cadastrado</p>)}
+                        {!isLoading && (
+                            <ListAtendimentos 
+                                children={<CardAcompanhamentoPedagogico list={atendimentos} />}   
+                            />)}
+                    </div>
+                </>
+            )}
         </>
 
     )

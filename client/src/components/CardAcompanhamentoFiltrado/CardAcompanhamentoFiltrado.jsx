@@ -2,7 +2,6 @@ import Button from "../Button/Button";
 import {useNavigate} from "react-router-dom";
 import "./CardAcompanhamentoFiltrado.css"
 function CardAcompanhamentoFiltrado ({list}) {
-    console.log(list)
     const navigate = useNavigate();
     const handleNavigateEdit = () => {
         navigate(`/editarAtendimento/${id}`);

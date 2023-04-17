@@ -1,0 +1,29 @@
+.box-filter {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 50%;
+    height: 40px;
+    flex: 1;
+}
+
+.error {
+    color: white;
+}
+
+.box-filter button {
+    width: 150px;
+    height: 100%;
+    margin: 10px;
+}
+
+.content-box {
+    position: absolute;
+    top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}

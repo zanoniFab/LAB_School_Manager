@@ -1,9 +1,15 @@
-.box-form {
-    background-color: #A5D7E8;
+.box-form-cadastro {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 100px;
+    background-color: #A5D7E8;
     width: 300px;
     border-radius: 5px;
     padding: 10px;
+}
+
+.box-form-cadastro h3 {
+    text-align: center;
 }

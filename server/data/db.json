@@ -7,156 +7,54 @@
       "telefone": "",
       "dataNascimento": "",
       "cpf": "",
+      "id": 2
+    },
+    {
+      "email": "fabiane@mail.com",
+      "password": "$2a$10$n5sutuecUBQfORGe.s/8nu8tpz2Dlk6isjEJeANB3gFD47KU4lMEC",
+      "nome": "Fabiane",
+      "telefone": "999999999",
+      "dataNascimento": "1992-06-07",
+      "cpf": "9999999999",
       "id": 1
     }
   ],
   "students": [
     {
-      "nome": "Silvana",
-      "telefone": "",
-      "dataNascimento": "",
-      "cpf": "",
-      "nota": 5,
+      "nome": "João",
+      "telefone": "999999999",
+      "dataNascimento": "1992-06-07",
+      "cpf": "8470606634",
+      "nota": 10,
       "id": 1
     },
     {
-      "nome": "Fabiane",
-      "telefone": "",
-      "dataNascimento": "",
-      "cpf": "8470606634",
-      "nota": 5,
+      "nota": 10,
+      "cpf": "999999999",
+      "dataNascimento": "1977-01-15",
+      "telefone": "999999999",
+      "nome": "Silvana",
       "id": 2
-    },
-    {
-      "nome": "Derick",
-      "telefone": "999999999",
-      "dataNascimento": "1992-06-07",
-      "cpf": "8470606634",
-      "nota": 10,
-      "id": 3
-    },
-    {
-      "nome": "Fabiane Zanoni",
-      "telefone": "999999999",
-      "dataNascimento": "1992-06-07",
-      "cpf": "8470606634",
-      "nota": 10,
-      "id": 4
-    },
-    {
-      "nome": "jose",
-      "telefone": "999999999",
-      "dataNascimento": "1992-06-07",
-      "cpf": "8470606634",
-      "nota": 10,
-      "id": 5
-    },
-    {
-      "nome": "josé",
-      "telefone": "999999999",
-      "dataNascimento": "1992-07-06",
-      "cpf": "8470606634",
-      "nota": 10,
-      "id": 6
     }
   ],
   "accompaniments": [
     {
-      "id": 1,
-      "studentId": 3,
-      "userId": 1,
-      "date": "27/03/2023",
-      "title": "Acompanhamento teste",
-      "description": "Descrição do acompanhamento",
-      "finished": false
-    },
-    {
-      "id": 2,
-      "studentId": 1,
-      "userId": 1,
-      "date": "01/03/2021",
-      "title": "Teste 01",
-      "description": "Descrição do acompanhamento",
-      "finished": false
-    },
-    {
-      "id": 3,
-      "studentId": 3,
-      "userId": 1,
-      "date": "02/02/2022",
-      "title": "Teste 02",
-      "description": "Descrição do acompanhamento",
-      "finished": false
-    },
-    {
-      "nome": "Fabiane",
-      "telefone": "999999999",
-      "dataNascimento": "",
-      "cpf": "8470606634",
-      "nota": 10,
-      "dataAcompanhamento": "1992-06-07",
-      "titulo": "jdoaijwaoidjoiaw",
-      "descricao": "djoiawjowiajdoa",
-      "finalizado": false,
-      "nao-finalizado": true,
-      "id": 4
-    },
-    {
-      "aluno": "Derick",
-      "pedagogo": "Zanonao",
-      "dataAcompanhamento": "1992-06-07",
-      "titulo": "Titulo de teste",
-      "descricao": "Descrição teste",
-      "finalizado": false,
-      "nao-finalizado": true,
-      "id": 5
-    },
-    {
-      "aluno": "Derick",
-      "pedagogo": "Zanonao",
-      "dataAcompanhamento": "1992-06-07",
-      "titulo": "Titulo de teste",
-      "descricao": "Descrição teste",
-      "finalizado": false,
-      "nao-finalizado": "false",
-      "id": 6
-    },
-    {
-      "aluno": "Derick",
-      "pedagogo": "Zanonao",
-      "dataAcompanhamento": "1992-06-07",
-      "titulo": "Titulo de teste",
-      "descricao": "Descrição teste",
-      "finalizado": false,
-      "naofinalizado": "false",
-      "id": 7
-    },
-    {
-      "aluno": "Derick",
-      "pedagogo": "Zanonao",
-      "dataAcompanhamento": "07/06/1992",
-      "titulo": "Titulo de teste",
-      "descricao": "Descrição teste",
-      "finalizado": true,
-      "id": 8
-    },
-    {
-      "nomeAluno": "Derick",
-      "nomePedagogo": "Zanonao",
-      "dataAcompanhamento": "1992-06-07",
-      "titulo": "Titulo de teste",
-      "descricao": "Descrição teste",
-      "finalizado": true,
-      "id": 9
-    },
-    {
       "nomeAluno": "Derick",
       "nomePedagogo": "Zanonao",
       "dataAcompanhamento": "1992-06-07",
       "titulo": "Titulo de teste",
       "descricao": "Descrição teste",
       "finalizado": false,
-      "id": 10
+      "id": 1
+    },
+    {
+      "nomeAluno": "",
+      "nomePedagogo": "",
+      "dataAcompanhamento": "42023-06-16",
+      "titulo": "teste",
+      "descricao": "teste",
+      "finalizado": true,
+      "id": 2
     }
   ]
 }
