@@ -1,6 +1,14 @@
 
 # LAB_School_Manager
 
+LINK VIDEO
+
+https://drive.google.com/file/d/1v2tSUIC4vD2alcbXT67dSPsY93AWuzEv/view?usp=sharing
+
+
+
+
+
 
 Projeto avaliativo em React do módulo 2 do curso DEVinHouse.
 
