@@ -12,6 +12,7 @@ export const useAtendimentoRegister = () => {
     const navigate = useNavigate();
 
     const atendimentoRegister = async (data) => {
+        console.log(data);
         setSubmitting(true);
         const response = await apiService.post('/accompaniments', data);
         if (response.data) {

@@ -20,7 +20,7 @@ function Header({...props}) {
         </Link>
 
         <div className="box-buttons">
-          <Link to="/home">Início</Link>
+          <Link to="/">Início</Link>
           <Link to="/listagemAlunos">Alunos</Link>
           <Link className="acompanhamento" to="/acompanhamentosPedagogicos">Acompanhamentos</Link>
         </div>

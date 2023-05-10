@@ -1,40 +1,43 @@
 import {useForm} from 'react-hook-form';
 import InputGroup from '../InputGroup';
 import {yupResolver} from '@hookform/resolvers/yup';
-import {validationSchema, defaultValues} from './FormSchema';
+import {validationSchema} from './FormSchema';
 import Button from '../Button';
 import { useNavigate } from 'react-router-dom';
 import SelectGroup from '../SelectGroup';
 import { useAtendimentoRegister } from '../../hooks/useAtendimentoRegister';
 import { useEffect } from 'react';
 import './FormCadastroAtendimento.css';
-function FormCadastroAtendimento ({onSubmit,isSubmitting,initialValues=defaultValues}) {
+function FormCadastroAtendimento ({onSubmit,isSubmitting}) {
     const navigate = useNavigate();
     const {listaPedagogos, listaAlunos, getListas} = useAtendimentoRegister();
     const {register,
             handleSubmit,
             formState:{errors},
-            reset} = useForm({resolver: yupResolver(validationSchema),defaultValues:initialValues});
+            reset} = useForm({resolver: yupResolver(validationSchema)});
 
     useEffect( () => {
-
         getListas();
-
     },[]);
 
 
     return (
+        
         <form onSubmit={handleSubmit(onSubmit)}>
 
             <SelectGroup 
-                name="alunos" 
-                lista = {listaAlunos}
-                {...register('nomeAluno')}
+                labelText="Selecione um aluno"
+                id="idAluno"
+                name="idAluno" 
+                data = {listaAlunos}
+                {...register('idAluno')}
             />
             <SelectGroup 
-                name="pedagogos" 
-                lista = {listaPedagogos}
-                {...register('nomePedagogo')}
+                labelText="Selecione um pedagogo"
+                id="idPedagogo"
+                name="idPedagogo" 
+                data = {listaPedagogos}
+                {...register('idPedagogo')}
             />
             <InputGroup 
                 id='dataAcompanhamento'

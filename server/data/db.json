@@ -38,23 +38,6 @@
     }
   ],
   "accompaniments": [
-    {
-      "nomeAluno": "Derick",
-      "nomePedagogo": "Zanonao",
-      "dataAcompanhamento": "1992-06-07",
-      "titulo": "Titulo de teste",
-      "descricao": "Descrição teste",
-      "finalizado": false,
-      "id": 1
-    },
-    {
-      "nomeAluno": "",
-      "nomePedagogo": "",
-      "dataAcompanhamento": "42023-06-16",
-      "titulo": "teste",
-      "descricao": "teste",
-      "finalizado": true,
-      "id": 2
-    }
+    
   ]
 }

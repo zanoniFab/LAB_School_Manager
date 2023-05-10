@@ -26,7 +26,6 @@ function AcompanhamentosPage ()  {
     
     return (
         <>
-            {!user && <Link to="/login">Faça o Login</Link>}
             {user && (
                 <>
                     <Header userName = {user?.name} />

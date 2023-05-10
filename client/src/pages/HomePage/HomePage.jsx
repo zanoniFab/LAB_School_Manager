@@ -18,20 +18,21 @@ function HomePage ()  {
 
     return (
         <>
-            {!user && <Link to="/login">Faça o Login</Link>}
-            {user && (
+            {/* {!user && <Link to="/login">Faça o Login</Link>} */}
+            {/* {user && ( */}
                 <>
-                    <Header userName = {user?.name} />
+                    {/* <Header userName = {user?.name} /> */}
                     <div className="content-box">
                         {!isLoading && !!error && <p>{error}</p>}
                         {!isLoading && !error && !atendimentos.length && (<p>Não há atendimento cadastrado</p>)}
                         {!isLoading && (
-                            <ListAtendimentos 
-                                children={<CardAcompanhamentoPedagogico list={atendimentos} />}   
-                            />)}
+                            <ListAtendimentos>
+                                <CardAcompanhamentoPedagogico list={atendimentos} />  
+                            </ListAtendimentos> 
+                            )}
                     </div>
                 </>
-            )}
+            {/* )} */}
         </>
 
     )
